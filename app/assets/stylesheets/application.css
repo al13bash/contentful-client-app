@@ -18,3 +18,26 @@
   width: 1180px;
   margin: auto;
 }
+
+.categories_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.category {
+  flex-basis: 300px;
+  margin-bottom: 30px;
+}
+
+.category > img {
+  display: block;
+  margin: auto;
+  object-fit: cover;
+  max-width: 200px;
+  height: 80px;
+}
+
+.category > h2 {
+  text-align: center;
+}
