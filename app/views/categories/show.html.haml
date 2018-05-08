@@ -1,0 +1,7 @@
+= link_to('Home', categories_path)
+%h1 Articles
+- @articles.each do |article|
+  %h2
+    = link_to(article.fields[:title], article_path(article.fields[:slug]))
+  = image_tag(article.fields[:thumbnail_horizontal].url)
+= paginate @articles

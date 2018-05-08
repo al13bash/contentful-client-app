@@ -1,0 +1,7 @@
+%h1 Categories
+- @categories.each do |category|
+  - title = category.fields[:title]
+  %div
+    %h2
+      = link_to(title, category_path(title: title))
+    = image_tag(category.fields[:icon].url)
