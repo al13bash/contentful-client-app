@@ -25,7 +25,7 @@ class ContentService
     private
 
     def client
-      @_client = Contentful::Client.new(
+      @_client ||= Contentful::Client.new(
         access_token: Rails.application.credentials.contentful_access_token,
         space: Rails.application.credentials.contentful_space,
         max_include_resolution_depth: 1
